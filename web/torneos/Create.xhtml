@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTorneosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTorneosLabel_clave}" for="clave" />
+                    <h:inputText id="clave" value="#{torneosController.selected.clave}" title="#{bundle.CreateTorneosTitle_clave}" required="true" requiredMessage="#{bundle.CreateTorneosRequiredMessage_clave}"/>
+                    <h:outputLabel value="#{bundle.CreateTorneosLabel_nombre}" for="nombre" />
+                    <h:inputText id="nombre" value="#{torneosController.selected.nombre}" title="#{bundle.CreateTorneosTitle_nombre}" />
+                    <h:outputLabel value="#{bundle.CreateTorneosLabel_fechaIni}" for="fechaIni" />
+                    <h:inputText id="fechaIni" value="#{torneosController.selected.fechaIni}" title="#{bundle.CreateTorneosTitle_fechaIni}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateTorneosLabel_fechaFin}" for="fechaFin" />
+                    <h:inputText id="fechaFin" value="#{torneosController.selected.fechaFin}" title="#{bundle.CreateTorneosTitle_fechaFin}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateTorneosLabel_descripcion}" for="descripcion" />
+                    <h:inputText id="descripcion" value="#{torneosController.selected.descripcion}" title="#{bundle.CreateTorneosTitle_descripcion}" />
+                    <h:outputLabel value="#{bundle.CreateTorneosLabel_cveJuego}" for="cveJuego" />
+                    <h:selectOneMenu id="cveJuego" value="#{torneosController.selected.cveJuego}" title="#{bundle.CreateTorneosTitle_cveJuego}" >
+                        <f:selectItems value="#{juegosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{torneosController.create}" value="#{bundle.CreateTorneosSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{torneosController.prepareList}" value="#{bundle.CreateTorneosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateTorneosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
