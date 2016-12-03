@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditRecordsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditRecordsLabel_clave}" for="clave" />
+                    <h:inputText id="clave" value="#{recordsController.selected.clave}" title="#{bundle.EditRecordsTitle_clave}" required="true" requiredMessage="#{bundle.EditRecordsRequiredMessage_clave}"/>
+                    <h:outputLabel value="#{bundle.EditRecordsLabel_record}" for="record" />
+                    <h:inputText id="record" value="#{recordsController.selected.record}" title="#{bundle.EditRecordsTitle_record}" />
+                    <h:outputLabel value="#{bundle.EditRecordsLabel_cveJuego}" for="cveJuego" />
+                    <h:selectOneMenu id="cveJuego" value="#{recordsController.selected.cveJuego}" title="#{bundle.EditRecordsTitle_cveJuego}" >
+                        <f:selectItems value="#{juegosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditRecordsLabel_cveUsuario}" for="cveUsuario" />
+                    <h:selectOneMenu id="cveUsuario" value="#{recordsController.selected.cveUsuario}" title="#{bundle.EditRecordsTitle_cveUsuario}" >
+                        <f:selectItems value="#{usuariosController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{recordsController.update}" value="#{bundle.EditRecordsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditRecordsViewLink}"/>
+                <br />
+                <h:commandLink action="#{recordsController.prepareList}" value="#{bundle.EditRecordsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditRecordsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

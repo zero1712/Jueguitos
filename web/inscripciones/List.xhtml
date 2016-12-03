@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListInscripcionesTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListInscripcionesEmpty}" rendered="#{inscripcionesController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{inscripcionesController.items.rowCount > 0}">
+                    <h:outputText value="#{inscripcionesController.pagination.pageFirstItem + 1}..#{inscripcionesController.pagination.pageLastItem + 1}/#{inscripcionesController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{inscripcionesController.previous}" value="#{bundle.Previous} #{inscripcionesController.pagination.pageSize}" rendered="#{inscripcionesController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{inscripcionesController.next}" value="#{bundle.Next} #{inscripcionesController.pagination.pageSize}" rendered="#{inscripcionesController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{inscripcionesController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListInscripcionesTitle_clave}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.clave}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListInscripcionesTitle_fecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListInscripcionesTitle_cveTorneo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cveTorneo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListInscripcionesTitle_cveUsuario}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cveUsuario}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{inscripcionesController.prepareView}" value="#{bundle.ListInscripcionesViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{inscripcionesController.prepareEdit}" value="#{bundle.ListInscripcionesEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{inscripcionesController.destroy}" value="#{bundle.ListInscripcionesDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{inscripcionesController.prepareCreate}" value="#{bundle.ListInscripcionesCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListInscripcionesIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
