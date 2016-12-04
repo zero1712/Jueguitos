@@ -4,19 +4,117 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-    <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title><ui:insert name="title">Default Title</ui:insert></title>
-        <h:outputStylesheet library="css" name="jsfcrud.css"/>
-    </h:head>
+ <h:head>
+		<title>Pagina Principal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<h:outputStylesheet name="css/main.css" />
+		<!--<h:outputStylesheet name="css/jsfcrud.css"/>--> <!--estilo inicial al crear las entitys-->
+                <style>
+		ul.m{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #92a2d6;
+		}
+		
+		li.m{
+			float: left;
+		}
+		
+		li.m a{
+			display: block;
+			padding: 8px;
+		}
+		</style>
+	</h:head>
 
-    <h:body>
-        <h1>
-            <ui:insert name="title">Default Title</ui:insert>
-        </h1>
-        <p>
-            <ui:insert name="body">Default Body</ui:insert>
-        </p>
-    </h:body>
+    	<h:body id="top">
+			<!-- Banner -->
+			<!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
+				<section id="banner" data-video="images/banner">
+					<div class="inner">
+						<header>
+							<h1><ui:insert name="title">Jueguitos</ui:insert></h1>
+							Plataforma de juegos<br />
+							
+						</header>
+						<a href="#main" class="more">Mas</a>
+					</div>
+				</section>
+
+			<!-- Main -->
+			  <ui:insert name="body">
+				<div id="main">
+					<div class="inner">
+					
+		
+					
+					<!-- Boxes -->
+						<div class="thumbnails">
+
+							<div class="box">
+								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>Juegos</h3>
+									<p>Invierte tiempo en nuestros juegos (no te arrepentiras) y pasala bien.</p>
+									
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Ver juegos</a>
+								</div>
+							</div>
+
+							<div class="box">
+								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>Noticias</h3>
+									<p>Enterate de todas las noticias aqui.</p>
+									
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Ver noticias</a>
+								</div>
+							</div>
+
+							<div class="box">
+								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>Torneos</h3>
+									<p>Participa en nuestros torneos y gana fabulosos reconocimientos.</p>
+									
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Ver torneos</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<h2><a href="login.jsp">Jueguitos</a></h2>
+						<p>Plataforma dedicada a los juegos en linea. </p>
+
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Jueguitos. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
+					<p class="copyright">Derechos reservados</p>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			</ui:insert>
+	</h:body>
 
 </html>
