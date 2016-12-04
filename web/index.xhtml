@@ -2,36 +2,143 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-        <h:outputStylesheet name="css/jsfcrud.css"/>
-    </h:head>
-    <h:body>
-        Hello from Facelets
-        <br />
-        <h:link outcome="/inscripciones/List" value="Show All Inscripciones Items"/>
-        <br />
-        <h:link outcome="/juegos/List" value="Show All Juegos Items"/>
-        <br />
-        <h:link outcome="/misiones/List" value="Show All Misiones Items"/>
-        <br />
-        <h:link outcome="/noticias/List" value="Show All Noticias Items"/>
-        <br />
-        <h:link outcome="/records/List" value="Show All Records Items"/>
-        <br />
-        <h:link outcome="/tiposUsuario/List" value="Show All TiposUsuario Items"/>
-        <br />
-        <h:link outcome="/torneos/List" value="Show All Torneos Items"/>
-        <br />
-        <h:link outcome="/usuarios/List" value="Show All Usuarios Items"/>
-    </h:body>
+   <h:head>
+		<title>Pagina Principal</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--<h:outputStylesheet name="css/jsfcrud.css"/>--> <!--estilo inicial al crear las entitys-->
+                <style>
+		ul.m{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #92a2d6;
+		}
+		
+		li.m{
+			float: left;
+		}
+		
+		li.m a{
+			display: block;
+			padding: 8px;
+		}
+		</style>
+	</h:head>
+	<h:body id="top">
+			<!-- Banner -->
+			<!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
+				<section id="banner" data-video="images/banner">
+					<div class="inner">
+						<header>
+							<h1>Jueguitos</h1>
+							<p>Plataforma de juegos<br />
+							diseño gráfico por <a href="https://templated.co/">Templated</a> utilizado bajo licencia Creative Commons License.</p>
+						</header>
+						<a href="#main" class="more">Mas</a>
+					</div>
+				</section>
 
+			<!-- Main -->
+				<div id="main">
+					<div class="inner">
+					
+		<ul class="m">
 
+		<li class="m"><h:link outcome="/inscripciones/List" value="Inscripciones"/></li>
+       
+        <li class="m"><h:link outcome="/juegos/List" value="Juegos"/></li>
+        
+        <li class="m"><h:link outcome="/misiones/List" value="Misiones"/></li>
+       
+        <li class="m"><h:link outcome="/noticias/List" value="Noticias"/></li>
+        
+        <li class="m"><h:link outcome="/records/List" value="Records"/></li>
+        
+        <li class="m"><h:link outcome="/tiposUsuario/List" value="Tipos de Usuario"/></li>
+        
+        <li class="m"><h:link outcome="/torneos/List" value="Torneos"/></li>
+        
+        <li class="m"><h:link outcome="/usuarios/List" value="Usuarios"/></li>											
+		</ul>
+						
+					
+					<!-- Boxes -->
+						<div class="thumbnails">
 
+							<div class="box">
+								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>Juegos</h3>
+									<p>Invierte tiempo en nuestros juegos (no te arrepentiras) y pasala bien.</p>
+									<!--<% if(login==null){ %>
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
+									<% } else {%>
+									<a href="juegos.jsp" class="button fit" >Ir</a>
+									<% }%>-->
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Ver juegos</a>
+								</div>
+							</div>
 
+							<div class="box">
+								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>Noticias</h3>
+									<p>Enterate de todas las noticias aqui.</p>
+									<!--<% if(login==null){ %>
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
+									<% } else {%>
+									<a href="torneos.jsp" class="button style2 fit" >Ir</a>
+									<% }%>-->
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Ver noticias</a>
+								</div>
+							</div>
 
+							<div class="box">
+								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+								<div class="inner">
+									<h3>Torneos</h3>
+									<p>Participa en nuestros torneos y gana fabulosos reconocimientos.</p>
+									<!--<% if(login==null){ %>
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
+									<% } else {%>
+									<a href="criticas.jsp" class="button style3 fit">Ir</a>
+									<% }%>-->
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Ver torneos</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<h2><a href="login.jsp">Jueguitos</a></h2>
+						<p>Plataforma dedicada a los juegos en linea. </p>
 
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Jueguitos. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
+					<p class="copyright">Derechos reservados</p>
+					</div>
+				</footer>
 
-
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</h:body>
 </html>
-
