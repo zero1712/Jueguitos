@@ -33,17 +33,17 @@
                     <h:outputText value="#{misionesController.selected.cveJuego}" title="#{bundle.ViewMisionesTitle_cveJuego}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{misionesController.destroyAndView}" value="#{bundle.ViewMisionesDestroyLink}"/>
+                <h:commandLink action="#{misionesController.destroyAndView}" value="#{bundle.ViewMisionesDestroyLink}" class="button fit"/>
                 <br />
                 <br />
                 <h:link outcome="Edit" value="#{bundle.ViewMisionesEditLink}"/>
                 <br />
-                <h:commandLink action="#{misionesController.prepareCreate}" value="#{bundle.ViewMisionesCreateLink}" />
+                <h:commandLink action="#{misionesController.prepareCreate}" value="#{bundle.ViewMisionesCreateLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{misionesController.prepareList}" value="#{bundle.ViewMisionesShowAllLink}"/>
+                <h:commandLink action="#{misionesController.prepareList}" value="#{bundle.ViewMisionesShowAllLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewMisionesIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewMisionesIndexLink}" class="button fit"/>
 
             </h:form>
         </ui:define>

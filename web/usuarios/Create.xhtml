@@ -35,13 +35,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{usuariosController.create}" value="#{bundle.CreateUsuariosSaveLink}" />
+                <h:commandLink action="#{usuariosController.create}" value="#{bundle.CreateUsuariosSaveLink}" class="button fit" />
                 <br />
                 <br />
-                <h:commandLink action="#{usuariosController.prepareList}" value="#{bundle.CreateUsuariosShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{usuariosController.prepareList}" value="#{bundle.CreateUsuariosShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateUsuariosIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateUsuariosIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

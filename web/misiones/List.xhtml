@@ -64,19 +64,19 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{misionesController.prepareView}" value="#{bundle.ListMisionesViewLink}"/>
+                            <h:commandLink action="#{misionesController.prepareView}" value="#{bundle.ListMisionesViewLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{misionesController.prepareEdit}" value="#{bundle.ListMisionesEditLink}"/>
+                            <h:commandLink action="#{misionesController.prepareEdit}" value="#{bundle.ListMisionesEditLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{misionesController.destroy}" value="#{bundle.ListMisionesDestroyLink}"/>
+                            <h:commandLink action="#{misionesController.destroy}" value="#{bundle.ListMisionesDestroyLink}" class="button fit"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{misionesController.prepareCreate}" value="#{bundle.ListMisionesCreateLink}"/>
+                <h:commandLink action="#{misionesController.prepareCreate}" value="#{bundle.ListMisionesCreateLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListMisionesIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ListMisionesIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

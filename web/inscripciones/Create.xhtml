@@ -31,13 +31,15 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{inscripcionesController.create}" value="#{bundle.CreateInscripcionesSaveLink}" />
+                
+                <h:commandLink action="#{inscripcionesController.create}" value="#{bundle.CreateInscripcionesSaveLink}" class="button fit" />
+                
                 <br />
                 <br />
-                <h:commandLink action="#{inscripcionesController.prepareList}" value="#{bundle.CreateInscripcionesShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{inscripcionesController.prepareList}" value="#{bundle.CreateInscripcionesShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateInscripcionesIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateInscripcionesIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

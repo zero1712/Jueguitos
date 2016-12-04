@@ -29,13 +29,13 @@
                     <h:inputText id="imagen" value="#{noticiasController.selected.imagen}" title="#{bundle.CreateNoticiasTitle_imagen}" />
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{noticiasController.create}" value="#{bundle.CreateNoticiasSaveLink}" />
+                <h:commandLink action="#{noticiasController.create}" value="#{bundle.CreateNoticiasSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:commandLink action="#{noticiasController.prepareList}" value="#{bundle.CreateNoticiasShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{noticiasController.prepareList}" value="#{bundle.CreateNoticiasShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateNoticiasIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateNoticiasIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

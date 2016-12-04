@@ -36,19 +36,19 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{tiposUsuarioController.prepareView}" value="#{bundle.ListTiposUsuarioViewLink}"/>
+                            <h:commandLink action="#{tiposUsuarioController.prepareView}" value="#{bundle.ListTiposUsuarioViewLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tiposUsuarioController.prepareEdit}" value="#{bundle.ListTiposUsuarioEditLink}"/>
+                            <h:commandLink action="#{tiposUsuarioController.prepareEdit}" value="#{bundle.ListTiposUsuarioEditLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{tiposUsuarioController.destroy}" value="#{bundle.ListTiposUsuarioDestroyLink}"/>
+                            <h:commandLink action="#{tiposUsuarioController.destroy}" value="#{bundle.ListTiposUsuarioDestroyLink}" class="button fit"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{tiposUsuarioController.prepareCreate}" value="#{bundle.ListTiposUsuarioCreateLink}"/>
+                <h:commandLink action="#{tiposUsuarioController.prepareCreate}" value="#{bundle.ListTiposUsuarioCreateLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListTiposUsuarioIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ListTiposUsuarioIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

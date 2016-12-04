@@ -29,17 +29,17 @@
                     <h:outputText value="#{noticiasController.selected.imagen}" title="#{bundle.ViewNoticiasTitle_imagen}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{noticiasController.destroyAndView}" value="#{bundle.ViewNoticiasDestroyLink}"/>
+                <h:commandLink action="#{noticiasController.destroyAndView}" value="#{bundle.ViewNoticiasDestroyLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewNoticiasEditLink}"/>
+                <h:link outcome="Edit" value="#{bundle.ViewNoticiasEditLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{noticiasController.prepareCreate}" value="#{bundle.ViewNoticiasCreateLink}" />
+                <h:commandLink action="#{noticiasController.prepareCreate}" value="#{bundle.ViewNoticiasCreateLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{noticiasController.prepareList}" value="#{bundle.ViewNoticiasShowAllLink}"/>
+                <h:commandLink action="#{noticiasController.prepareList}" value="#{bundle.ViewNoticiasShowAllLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewNoticiasIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewNoticiasIndexLink}" class="button fit"/>
 
             </h:form>
         </ui:define>

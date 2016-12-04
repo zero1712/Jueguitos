@@ -35,13 +35,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{misionesController.create}" value="#{bundle.CreateMisionesSaveLink}" />
+                <h:commandLink action="#{misionesController.create}" value="#{bundle.CreateMisionesSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:commandLink action="#{misionesController.prepareList}" value="#{bundle.CreateMisionesShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{misionesController.prepareList}" value="#{bundle.CreateMisionesShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateMisionesIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateMisionesIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

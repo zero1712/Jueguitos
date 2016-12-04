@@ -35,13 +35,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{torneosController.create}" value="#{bundle.CreateTorneosSaveLink}" />
+                <h:commandLink action="#{torneosController.create}" value="#{bundle.CreateTorneosSaveLink}" class="button fit" />
                 <br />
                 <br />
-                <h:commandLink action="#{torneosController.prepareList}" value="#{bundle.CreateTorneosShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{torneosController.prepareList}" value="#{bundle.CreateTorneosShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateTorneosIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateTorneosIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

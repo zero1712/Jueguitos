@@ -21,13 +21,13 @@
                     <h:inputText id="tipo" value="#{tiposUsuarioController.selected.tipo}" title="#{bundle.CreateTiposUsuarioTitle_tipo}" />
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{tiposUsuarioController.create}" value="#{bundle.CreateTiposUsuarioSaveLink}" />
+                <h:commandLink action="#{tiposUsuarioController.create}" value="#{bundle.CreateTiposUsuarioSaveLink}" class="button fit" />
                 <br />
                 <br />
-                <h:commandLink action="#{tiposUsuarioController.prepareList}" value="#{bundle.CreateTiposUsuarioShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{tiposUsuarioController.prepareList}" value="#{bundle.CreateTiposUsuarioShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateTiposUsuarioIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateTiposUsuarioIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

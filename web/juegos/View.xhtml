@@ -25,17 +25,17 @@
                     <h:outputText value="#{juegosController.selected.reglas}" title="#{bundle.ViewJuegosTitle_reglas}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{juegosController.destroyAndView}" value="#{bundle.ViewJuegosDestroyLink}"/>
+                <h:commandLink action="#{juegosController.destroyAndView}" value="#{bundle.ViewJuegosDestroyLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewJuegosEditLink}"/>
+                <h:link outcome="Edit" value="#{bundle.ViewJuegosEditLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ViewJuegosCreateLink}" />
+                <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ViewJuegosCreateLink}" class="button fit" />
                 <br />
-                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.ViewJuegosShowAllLink}"/>
+                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.ViewJuegosShowAllLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewJuegosIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewJuegosIndexLink}" class="button fit"/>
 
             </h:form>
         </ui:define>

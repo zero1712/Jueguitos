@@ -28,15 +28,15 @@
                     <h:outputLabel value="#{bundle.EditNoticiasLabel_imagen}" for="imagen" />
                     <h:inputText id="imagen" value="#{noticiasController.selected.imagen}" title="#{bundle.EditNoticiasTitle_imagen}" />
                 </h:panelGrid>
-                <h:commandLink action="#{noticiasController.update}" value="#{bundle.EditNoticiasSaveLink}"/>
+                <h:commandLink action="#{noticiasController.update}" value="#{bundle.EditNoticiasSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditNoticiasViewLink}"/>
+                <h:link outcome="View" value="#{bundle.EditNoticiasViewLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{noticiasController.prepareList}" value="#{bundle.EditNoticiasShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{noticiasController.prepareList}" value="#{bundle.EditNoticiasShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditNoticiasIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditNoticiasIndexLink}"  class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

@@ -24,15 +24,15 @@
                     <h:outputLabel value="#{bundle.EditJuegosLabel_reglas}" for="reglas" />
                     <h:inputText id="reglas" value="#{juegosController.selected.reglas}" title="#{bundle.EditJuegosTitle_reglas}" />
                 </h:panelGrid>
-                <h:commandLink action="#{juegosController.update}" value="#{bundle.EditJuegosSaveLink}"/>
+                <h:commandLink action="#{juegosController.update}" value="#{bundle.EditJuegosSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditJuegosViewLink}"/>
+                <h:link outcome="View" value="#{bundle.EditJuegosViewLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.EditJuegosShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.EditJuegosShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditJuegosIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditJuegosIndexLink}" class="button fit" />
             </h:form>
         </ui:define>
     </ui:composition>

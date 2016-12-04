@@ -48,19 +48,19 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}"/>
+                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}"/>
+                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}"/>
+                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{recordsController.prepareCreate}" value="#{bundle.ListRecordsCreateLink}"/>
+                <h:commandLink action="#{recordsController.prepareCreate}" value="#{bundle.ListRecordsCreateLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListRecordsIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ListRecordsIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

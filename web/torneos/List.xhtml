@@ -64,19 +64,19 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{torneosController.prepareView}" value="#{bundle.ListTorneosViewLink}"/>
+                            <h:commandLink action="#{torneosController.prepareView}" value="#{bundle.ListTorneosViewLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{torneosController.prepareEdit}" value="#{bundle.ListTorneosEditLink}"/>
+                            <h:commandLink action="#{torneosController.prepareEdit}" value="#{bundle.ListTorneosEditLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{torneosController.destroy}" value="#{bundle.ListTorneosDestroyLink}"/>
+                            <h:commandLink action="#{torneosController.destroy}" value="#{bundle.ListTorneosDestroyLink}" class="button fit"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{torneosController.prepareCreate}" value="#{bundle.ListTorneosCreateLink}"/>
+                <h:commandLink action="#{torneosController.prepareCreate}" value="#{bundle.ListTorneosCreateLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListTorneosIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ListTorneosIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

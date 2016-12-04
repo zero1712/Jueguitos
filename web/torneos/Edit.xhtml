@@ -34,15 +34,15 @@
                         <f:selectItems value="#{juegosController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{torneosController.update}" value="#{bundle.EditTorneosSaveLink}"/>
+                <h:commandLink action="#{torneosController.update}" value="#{bundle.EditTorneosSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditTorneosViewLink}"/>
+                <h:link outcome="View" value="#{bundle.EditTorneosViewLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{torneosController.prepareList}" value="#{bundle.EditTorneosShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{torneosController.prepareList}" value="#{bundle.EditTorneosShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditTorneosIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditTorneosIndexLink}" class="button fit" />
             </h:form>
         </ui:define>
     </ui:composition>

@@ -56,19 +56,19 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{noticiasController.prepareView}" value="#{bundle.ListNoticiasViewLink}"/>
+                            <h:commandLink action="#{noticiasController.prepareView}" value="#{bundle.ListNoticiasViewLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{noticiasController.prepareEdit}" value="#{bundle.ListNoticiasEditLink}"/>
+                            <h:commandLink action="#{noticiasController.prepareEdit}" value="#{bundle.ListNoticiasEditLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{noticiasController.destroy}" value="#{bundle.ListNoticiasDestroyLink}"/>
+                            <h:commandLink action="#{noticiasController.destroy}" value="#{bundle.ListNoticiasDestroyLink}" class="button fit"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{noticiasController.prepareCreate}" value="#{bundle.ListNoticiasCreateLink}"/>
+                <h:commandLink action="#{noticiasController.prepareCreate}" value="#{bundle.ListNoticiasCreateLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListNoticiasIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ListNoticiasIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

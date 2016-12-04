@@ -34,15 +34,15 @@
                         <f:selectItems value="#{juegosController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{misionesController.update}" value="#{bundle.EditMisionesSaveLink}"/>
+                <h:commandLink action="#{misionesController.update}" value="#{bundle.EditMisionesSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditMisionesViewLink}"/>
+                <h:link outcome="View" value="#{bundle.EditMisionesViewLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{misionesController.prepareList}" value="#{bundle.EditMisionesShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{misionesController.prepareList}" value="#{bundle.EditMisionesShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditMisionesIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditMisionesIndexLink}"  class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

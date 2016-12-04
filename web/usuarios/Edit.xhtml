@@ -34,15 +34,15 @@
                         <f:selectItems value="#{tiposUsuarioController.itemsAvailableSelectOne}"/>
                     </h:selectOneMenu>
                 </h:panelGrid>
-                <h:commandLink action="#{usuariosController.update}" value="#{bundle.EditUsuariosSaveLink}"/>
+                <h:commandLink action="#{usuariosController.update}" value="#{bundle.EditUsuariosSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditUsuariosViewLink}"/>
+                <h:link outcome="View" value="#{bundle.EditUsuariosViewLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{usuariosController.prepareList}" value="#{bundle.EditUsuariosShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{usuariosController.prepareList}" value="#{bundle.EditUsuariosShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditUsuariosIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditUsuariosIndexLink}" class="button fit" />
             </h:form>
         </ui:define>
     </ui:composition>

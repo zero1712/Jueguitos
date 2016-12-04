@@ -20,15 +20,15 @@
                     <h:outputLabel value="#{bundle.EditTiposUsuarioLabel_tipo}" for="tipo" />
                     <h:inputText id="tipo" value="#{tiposUsuarioController.selected.tipo}" title="#{bundle.EditTiposUsuarioTitle_tipo}" />
                 </h:panelGrid>
-                <h:commandLink action="#{tiposUsuarioController.update}" value="#{bundle.EditTiposUsuarioSaveLink}"/>
+                <h:commandLink action="#{tiposUsuarioController.update}" value="#{bundle.EditTiposUsuarioSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="View" value="#{bundle.EditTiposUsuarioViewLink}"/>
+                <h:link outcome="View" value="#{bundle.EditTiposUsuarioViewLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{tiposUsuarioController.prepareList}" value="#{bundle.EditTiposUsuarioShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{tiposUsuarioController.prepareList}" value="#{bundle.EditTiposUsuarioShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.EditTiposUsuarioIndexLink}" />
+                <h:link outcome="/index" value="#{bundle.EditTiposUsuarioIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

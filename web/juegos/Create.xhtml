@@ -25,13 +25,13 @@
                     <h:inputText id="reglas" value="#{juegosController.selected.reglas}" title="#{bundle.CreateJuegosTitle_reglas}" />
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{juegosController.create}" value="#{bundle.CreateJuegosSaveLink}" />
+                <h:commandLink action="#{juegosController.create}" value="#{bundle.CreateJuegosSaveLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.CreateJuegosShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.CreateJuegosShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateJuegosIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateJuegosIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

@@ -21,17 +21,17 @@
                     <h:outputText value="#{tiposUsuarioController.selected.tipo}" title="#{bundle.ViewTiposUsuarioTitle_tipo}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{tiposUsuarioController.destroyAndView}" value="#{bundle.ViewTiposUsuarioDestroyLink}"/>
+                <h:commandLink action="#{tiposUsuarioController.destroyAndView}" value="#{bundle.ViewTiposUsuarioDestroyLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewTiposUsuarioEditLink}"/>
+                <h:link outcome="Edit" value="#{bundle.ViewTiposUsuarioEditLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{tiposUsuarioController.prepareCreate}" value="#{bundle.ViewTiposUsuarioCreateLink}" />
+                <h:commandLink action="#{tiposUsuarioController.prepareCreate}" value="#{bundle.ViewTiposUsuarioCreateLink}" class="button fit" />
                 <br />
-                <h:commandLink action="#{tiposUsuarioController.prepareList}" value="#{bundle.ViewTiposUsuarioShowAllLink}"/>
+                <h:commandLink action="#{tiposUsuarioController.prepareList}" value="#{bundle.ViewTiposUsuarioShowAllLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewTiposUsuarioIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewTiposUsuarioIndexLink}" class="button fit"/>
 
             </h:form>
         </ui:define>

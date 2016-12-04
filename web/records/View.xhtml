@@ -25,17 +25,17 @@
                     <h:outputText value="#{recordsController.selected.cveUsuario}" title="#{bundle.ViewRecordsTitle_cveUsuario}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{recordsController.destroyAndView}" value="#{bundle.ViewRecordsDestroyLink}"/>
+                <h:commandLink action="#{recordsController.destroyAndView}" value="#{bundle.ViewRecordsDestroyLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewRecordsEditLink}"/>
+                <h:link outcome="Edit" value="#{bundle.ViewRecordsEditLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{recordsController.prepareCreate}" value="#{bundle.ViewRecordsCreateLink}" />
+                <h:commandLink action="#{recordsController.prepareCreate}" value="#{bundle.ViewRecordsCreateLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{recordsController.prepareList}" value="#{bundle.ViewRecordsShowAllLink}"/>
+                <h:commandLink action="#{recordsController.prepareList}" value="#{bundle.ViewRecordsShowAllLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewRecordsIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewRecordsIndexLink}" class="button fit"/>
 
             </h:form>
         </ui:define>

@@ -29,13 +29,13 @@
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{recordsController.create}" value="#{bundle.CreateRecordsSaveLink}" />
+                <h:commandLink action="#{recordsController.create}" value="#{bundle.CreateRecordsSaveLink}" class="button fit" />
                 <br />
                 <br />
-                <h:commandLink action="#{recordsController.prepareList}" value="#{bundle.CreateRecordsShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{recordsController.prepareList}" value="#{bundle.CreateRecordsShowAllLink}" immediate="true" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateRecordsIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.CreateRecordsIndexLink}" class="button fit"/>
             </h:form>
         </ui:define>
     </ui:composition>

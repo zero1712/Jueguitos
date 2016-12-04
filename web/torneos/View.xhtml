@@ -33,17 +33,17 @@
                     <h:outputText value="#{torneosController.selected.cveJuego}" title="#{bundle.ViewTorneosTitle_cveJuego}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{torneosController.destroyAndView}" value="#{bundle.ViewTorneosDestroyLink}"/>
+                <h:commandLink action="#{torneosController.destroyAndView}" value="#{bundle.ViewTorneosDestroyLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewTorneosEditLink}"/>
+                <h:link outcome="Edit" value="#{bundle.ViewTorneosEditLink}" class="button fit"/>
                 <br />
-                <h:commandLink action="#{torneosController.prepareCreate}" value="#{bundle.ViewTorneosCreateLink}" />
+                <h:commandLink action="#{torneosController.prepareCreate}" value="#{bundle.ViewTorneosCreateLink}" class="button fit" />
                 <br />
-                <h:commandLink action="#{torneosController.prepareList}" value="#{bundle.ViewTorneosShowAllLink}"/>
+                <h:commandLink action="#{torneosController.prepareList}" value="#{bundle.ViewTorneosShowAllLink}" class="button fit"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewTorneosIndexLink}"/>
+                <h:link outcome="/index" value="#{bundle.ViewTorneosIndexLink}" class="button fit"/>
 
             </h:form>
         </ui:define>
