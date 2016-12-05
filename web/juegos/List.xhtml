@@ -50,9 +50,9 @@
                             </f:facet>
                             <h:commandLink action="#{juegosController.prepareView}" value="#{bundle.ListJuegosViewLink}" class="button fit"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{juegosController.prepareEdit}" value="#{bundle.ListJuegosEditLink}" class="button fit"/>
+                            <h:commandLink action="#{juegosController.prepareEdit}" value="#{bundle.ListJuegosEditLink}" class="button fit" rendered="#{tipo == 1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{juegosController.destroy}" value="#{bundle.ListJuegosDestroyLink}" class="button fit"/>
+                            <h:commandLink action="#{juegosController.destroy}" value="#{bundle.ListJuegosDestroyLink}" class="button fit" rendered="#{tipo == 1}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
