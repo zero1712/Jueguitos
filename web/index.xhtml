@@ -35,14 +35,41 @@
 				formats to work correctly.
 			-->
 				<section id="banner" data-video="images/banner">
-					<div class="inner">
+                                    <h:panelGroup rendered="#{empty username}">
+                                        <div class="inner">
 						<header>
-							<h1>Jueguitos</h1>
+                                                    <div style="float: left; width: 420px;" >
+                                                        <h1>Jueguitos</h1>
 							<p>Plataforma de juegos<br />
 							diseño gráfico por <a href="https://templated.co/">Templated</a> utilizado bajo licencia Creative Commons License.</p>
+                                                    </div>
+                                                    <div style="float: right; width: 420px;" >
+                                                        <h:form>
+                                                            <h3>JSF Login Logout</h3>
+                                                            <h:outputText value="Username" />
+                                                            <h:inputText id="username" value="#{login.user}"></h:inputText>
+                                                            <h:message for="username"></h:message>
+                                                            <br></br><br></br>
+		
+                                                            <h:outputText value="Password" />
+                                                            <h:inputSecret id="password" value="#{login.pwd}"></h:inputSecret>
+                                                            <h:message for="password"></h:message>
+                                                            <br></br><br></br>
+		
+                                                            <h:commandButton action="#{login.validateUsernamePassword}" value="Login"></h:commandButton>
+                                                            <a href="#main" class="btn btn-success">Mas</a>
+                
+                                                        </h:form>
+                                                    </div>
 						</header>
 						<a href="#main" class="more">Mas</a>
 					</div>
+                                    
+                                    </h:panelGroup>
+                                    <h:panelGroup rendered="#{not empty username}">
+                                        <p>Welcome #{username}, you have been logged in!</p>
+                                    </h:panelGroup>
+					
 				</section>
 
 			<!-- Main -->
@@ -50,22 +77,17 @@
 					<div class="inner">
 					
 		<ul class="m">
-
-		<li class="m"><h:link outcome="/inscripciones/List" value="Inscripciones"/></li>
        
-        <li class="m"><h:link outcome="/juegos/List" value="Juegos"/></li>
+                    <li class="m"><h:link outcome="/juegos/List" value="Juegos"/></li>
         
-        <li class="m"><h:link outcome="/misiones/List" value="Misiones"/></li>
+                    <li class="m"><h:link outcome="/misiones/List" value="Misiones"/></li>
        
-        <li class="m"><h:link outcome="/noticias/List" value="Noticias"/></li>
+                    <li class="m"><h:link outcome="/noticias/List" value="Noticias"/></li>
         
-        <li class="m"><h:link outcome="/records/List" value="Records"/></li>
+                    <li class="m"><h:link outcome="/records/List" value="Records"/></li>
         
-        <li class="m"><h:link outcome="/tiposUsuario/List" value="Tipos de Usuario"/></li>
-        
-        <li class="m"><h:link outcome="/torneos/List" value="Torneos"/></li>
-        
-        <li class="m"><h:link outcome="/usuarios/List" value="Usuarios"/></li>											
+                    <li class="m"><h:link outcome="/torneos/List" value="Torneos"/></li>
+        										
 		</ul>
 						
 					
@@ -119,7 +141,8 @@
 			<!-- Footer -->
 				<footer id="footer">
 					<div class="inner">
-						<h2><a href="login.jsp">Jueguitos</a></h2>
+                                                <h2><h:link outcome="/login" value="Juegitos"/></h2>
+						
 						<p>Plataforma dedicada a los juegos en linea. </p>
 
 						<ul class="icons">
