@@ -7,7 +7,8 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.ListRecordsTitle}"></h:outputText>
+            <img src="../assets/css/images/copa.png" />
+            <h:outputText value="#{bundle.ListRecordsTitulo}"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:form styleClass="jsfcrud_list_form">
@@ -16,46 +17,99 @@
                 </h:panelGroup>
                 <h:outputText escape="false" value="#{bundle.ListRecordsEmpty}" rendered="#{recordsController.items.rowCount == 0}"/>
                 <h:panelGroup rendered="#{recordsController.items.rowCount > 0}">
-                    <h:outputText value="#{recordsController.pagination.pageFirstItem + 1}..#{recordsController.pagination.pageLastItem + 1}/#{recordsController.pagination.itemsCount}"/>&nbsp;
+                    <h:outputText value="#{bundle.NombreSaludador}"/>&nbsp;
                     <h:commandLink action="#{recordsController.previous}" value="#{bundle.Previous} #{recordsController.pagination.pageSize}" rendered="#{recordsController.pagination.hasPreviousPage}"/>&nbsp;
                     <h:commandLink action="#{recordsController.next}" value="#{bundle.Next} #{recordsController.pagination.pageSize}" rendered="#{recordsController.pagination.hasNextPage}"/>&nbsp;
                     <h:dataTable value="#{recordsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                     
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListRecordsTitle_clave}"/>
+                                <h:outputText value="#{bundle.ListRecordsTitle_record}" />
                             </f:facet>
-                            <h:outputText value="#{item.clave}"/>
+                            <h:outputText value="#{item.record}" rendered="#{item.cveJuego.clave == 1}"/>
                         </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListRecordsTitle_record}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.record}"/>
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">
-                                <h:outputText value="#{bundle.ListRecordsTitle_cveJuego}"/>
-                            </f:facet>
-                            <h:outputText value="#{item.cveJuego}"/>
-                        </h:column>
+                 
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListRecordsTitle_cveUsuario}"/>
                             </f:facet>
-                            <h:outputText value="#{item.cveUsuario}"/>
+                            <h:outputText value="#{item.cveUsuario}" rendered="#{item.cveJuego.clave == 1}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit"/>
+                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit"/>
+                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit"/>
+                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 1}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
+                
+                <h:panelGroup rendered="#{recordsController.items.rowCount > 0}">
+                    <h:outputText value="#{bundle.NombreBizz}"/>&nbsp;
+                    <h:commandLink action="#{recordsController.previous}" value="#{bundle.Previous} #{recordsController.pagination.pageSize}" rendered="#{recordsController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{recordsController.next}" value="#{bundle.Next} #{recordsController.pagination.pageSize}" rendered="#{recordsController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{recordsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                       
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListRecordsTitle_record}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.record}" rendered="#{item.cveJuego.clave == 2}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListRecordsTitle_cveUsuario}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cveUsuario}" rendered="#{item.cveJuego.clave == 2}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 2}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 2}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 2}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                
+                <h:panelGroup rendered="#{recordsController.items.rowCount > 0}">
+                    <h:outputText value="#{bundle.NombrePiedra}"/>&nbsp;
+                    <h:commandLink action="#{recordsController.previous}" value="#{bundle.Previous} #{recordsController.pagination.pageSize}" rendered="#{recordsController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{recordsController.next}" value="#{bundle.Next} #{recordsController.pagination.pageSize}" rendered="#{recordsController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{recordsController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row," rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListRecordsTitle_record}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.record}" rendered="#{item.cveJuego.clave == 3}"/>
+                        </h:column>                        
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListRecordsTitle_cveUsuario}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.cveUsuario}" rendered="#{item.cveJuego.clave == 3}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 3}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 3}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 3}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                
                 <br />
                 <h:commandLink action="#{recordsController.prepareCreate}" value="#{bundle.ListRecordsCreateLink}" class="button fit"/>
                 <br />
