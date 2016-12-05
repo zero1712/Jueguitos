@@ -33,17 +33,17 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListRecordsTitle_cveUsuario}"/>
                             </f:facet>
-                            <h:outputText value="#{item.cveUsuario}" rendered="#{item.cveJuego.clave == 1}"/>
+                            <h:outputText value="#{item.cveUsuario.login}" rendered="#{item.cveJuego.clave == 1}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 1}"/>
+                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 1 and item.cveUsuario.login==username}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 1}"/>
+                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 1 and tipo==1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 1}"/>
+                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 1 and tipo==1}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
@@ -65,17 +65,17 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListRecordsTitle_cveUsuario}"/>
                             </f:facet>
-                            <h:outputText value="#{item.cveUsuario}" rendered="#{item.cveJuego.clave == 2}"/>
+                            <h:outputText value="#{item.cveUsuario.login}" rendered="#{item.cveJuego.clave == 2}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 2}"/>
+                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 2 and item.cveUsuario.login==username}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 2}"/>
+                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 2 and tipo==1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 2}"/>
+                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 2 and tipo==1}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
@@ -95,17 +95,17 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListRecordsTitle_cveUsuario}"/>
                             </f:facet>
-                            <h:outputText value="#{item.cveUsuario}" rendered="#{item.cveJuego.clave == 3}"/>
+                            <h:outputText value="#{item.cveUsuario.login}" rendered="#{item.cveJuego.clave == 3}"/>
                         </h:column>
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 3}"/>
+                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 3 and item.cveUsuario.login==username}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 3}"/>
+                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 3 and tipo==1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 3}"/>
+                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 3 and tipo==1}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
