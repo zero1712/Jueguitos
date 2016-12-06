@@ -59,6 +59,7 @@ public class Saludador extends HttpServlet {
 		String nombre = request.getParameter("nombre");
 		response.setContentType("text/html");
         PrintWriter out = response.getWriter();
+        out.println("<link rel=\"stylesheet\" href=\"../Jueguitos/faces/assets/css/main.css\" />");
         this.init(getServletConfig());
         boolean ban = true;
         while (this.nomb.hasMoreElements()) {
@@ -71,7 +72,12 @@ public class Saludador extends HttpServlet {
             }
           } 
         if(ban){
+                
         	out.println("Hola "+nombre);
+                out.println("<form action=\"/Jueguitos/faces/juegos/View.xhtml\">");
+	        out.println("<input type=\"submit\" value=\"Regresar\">");
+	        out.println("</form>");
+                
         }
 	}
 
