@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
    <h:head>
 		<title>Pagina Principal</title>
 		<meta charset="utf-8" />
@@ -115,6 +116,17 @@
 								<div class="inner">
 									<h3>Noticias</h3>
 									<p>Enterate de todas las noticias aqui.</p>
+                                                                        
+                                                                         <h:dataTable value="#{noticiasController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                                                                            <h:column>
+                                                                            <h:outputText value="#{item.fecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                                                                                    |   
+                                                                                    
+                                                                            <h:outputText value="#{item.descripcion}"/>
+                                                                            </h:column>
+                                                                         </h:dataTable>
 									<!--<% if(login==null){ %>
 									<a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
 									<% } else {%>
@@ -127,14 +139,14 @@
 							<div class="box">
 								<a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 								<div class="inner">
-									<h3>Torneos</h3>
-									<p>Participa en nuestros torneos y gana fabulosos reconocimientos.</p>
+									<h3>Records</h3>
+									<p>Los mejores siempre estaran en el muro de la fama:</p>
 									<!--<% if(login==null){ %>
 									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
 									<% } else {%>
 									<a href="criticas.jsp" class="button style3 fit">Ir</a>
 									<% }%>-->
-									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Ver torneos</a>
+									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Ver records</a>
 								</div>
 							</div>
 						</div>
