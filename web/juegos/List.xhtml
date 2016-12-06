@@ -57,7 +57,7 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ListJuegosCreateLink}" class="button fit"/>
+                <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ListJuegosCreateLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.ListJuegosIndexLink}" class="button fit"/>
