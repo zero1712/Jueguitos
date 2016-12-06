@@ -141,7 +141,7 @@
 								<div class="inner">
 									<h3>Records</h3>
 									<p>Los mejores siempre estaran en el muro de la fama:</p>
-                                                                        
+                                                                        <h:form styleClass="jsfcrud_list_form">
                                                                                          <h:panelGroup rendered="#{recordsController.items.rowCount > 0}">
                     <h:outputText value="#{bundle.NombreSaludador}"/>&nbsp;
                     <h:commandLink action="#{recordsController.previous}" value="#{bundle.Previous} #{recordsController.pagination.pageSize}" rendered="#{recordsController.pagination.hasPreviousPage}"/>&nbsp;
@@ -165,11 +165,7 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 1 and item.cveUsuario.login==username}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 1 and tipo==1}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 1 and tipo==1}"/>
+                            
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
@@ -197,11 +193,7 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 2 and item.cveUsuario.login==username}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 2 and tipo==1}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 2 and tipo==1}"/>
+                           
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
@@ -227,15 +219,11 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{recordsController.prepareView}" value="#{bundle.ListRecordsViewLink}" class="button fit" rendered="#{item.cveJuego.clave == 3 and item.cveUsuario.login==username}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.prepareEdit}" value="#{bundle.ListRecordsEditLink}" class="button fit" rendered="#{item.cveJuego.clave == 3 and tipo==1}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{recordsController.destroy}" value="#{bundle.ListRecordsDestroyLink}" class="button fit" rendered="#{item.cveJuego.clave == 3 and tipo==1}"/>
+                           
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
-                                                                        
+                         </h:form>  <!--AB-->                                             
 									<!--<% if(login==null){ %>
 									<a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
 									<% } else {%>
