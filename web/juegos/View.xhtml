@@ -25,14 +25,23 @@
                     <h:outputText value="#{juegosController.selected.reglas}" title="#{bundle.ViewJuegosTitle_reglas}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{juegosController.destroyAndView}" value="#{bundle.ViewJuegosDestroyLink}" class="button fit"/>
+                <h:commandLink action="#{juegosController.destroyAndView}" value="#{bundle.ViewJuegosDestroyLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewJuegosEditLink}" class="button fit"/>
+                <h:link outcome="Edit" value="#{bundle.ViewJuegosEditLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
-                <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ViewJuegosCreateLink}" class="button fit" />
+                <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ViewJuegosCreateLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
-                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.ViewJuegosShowAllLink}" class="button fit"/>
+                <h:outputText value="Clave juego: "/><h:inputText id="password" value="#{login.j}"></h:inputText>
+                <h:outputText value="Cleve usuario: "/><h:inputText id="we" value="#{login.u}"></h:inputText>
+                <h:commandLink action="#{login.actualizaRecord}" value="#{bundle.Jugar}" class="button fit" rendered="#{juegosController.selected.clave==1}"/>
+                <br />
+                <h:commandLink action="#{login.actualizaRecord}" value="#{bundle.Jugar}" class="button fit" rendered="#{juegosController.selected.clave==2}"/>
+                <br />
+                <h:commandLink action="#{login.actualizaRecord}" value="#{bundle.Jugar}" class="button fit" rendered="#{juegosController.selected.clave==3}"/>
+                <br />
+        
+                <h:commandLink action="#{juegosController.prepareList}" value="#{bundle.ViewJuegosShowAllLink}" class="button fit" />
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.ViewJuegosIndexLink}" class="button fit"/>
