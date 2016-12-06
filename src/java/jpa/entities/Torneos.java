@@ -152,7 +152,7 @@ public class Torneos implements Serializable {
 
     @Override
     public String toString() {
-        return "jpa.entities.Torneos[ clave=" + clave + " ]";
+        return clave + ","+ nombre ;
     }
     
 }

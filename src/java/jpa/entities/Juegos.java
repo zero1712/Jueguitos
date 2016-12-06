@@ -146,7 +146,7 @@ public class Juegos implements Serializable {
 
     @Override
     public String toString() {
-        return "jpa.entities.Juegos[ clave=" + clave + " ]";
+        return clave + ","+ nombre ;
     }
     
 }
