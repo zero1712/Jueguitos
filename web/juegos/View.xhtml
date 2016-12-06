@@ -23,6 +23,8 @@
                     <h:outputText value="#{juegosController.selected.descripcion}" title="#{bundle.ViewJuegosTitle_descripcion}"/>
                     <h:outputText value="#{bundle.ViewJuegosLabel_reglas}"/>
                     <h:outputText value="#{juegosController.selected.reglas}" title="#{bundle.ViewJuegosTitle_reglas}"/>
+                    <h:outputText value="Clave de Usuario" />
+                    <h:outputText value="#{clave}" title=""/>
                 </h:panelGrid>
                 <br />
                 <h:commandLink action="#{juegosController.destroyAndView}" value="#{bundle.ViewJuegosDestroyLink}" class="button fit" rendered="#{tipo == 1}"/>
@@ -33,7 +35,7 @@
                 <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ViewJuegosCreateLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
                 <h:outputText value="Clave juego: "/><h:inputText id="password" value="#{login.j}"></h:inputText>
-                <h:outputText value="Cleve usuario: "/><h:inputText id="we" value="#{login.u}"></h:inputText>
+                <h:outputText value="Clave usuario: "/><h:inputText id="we" value="#{login.u}"></h:inputText>
                 <h:commandLink action="#{login.actualizaRecord}" value="#{bundle.Jugar}" class="button fit" rendered="#{juegosController.selected.clave==1}"/>
                 <br />
                 <h:commandLink action="#{login.actualizaRecord}" value="#{bundle.Jugar}" class="button fit" rendered="#{juegosController.selected.clave==2}"/>
