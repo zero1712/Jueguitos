@@ -29,6 +29,25 @@ public class Login implements Serializable{
 	private static  String pwd;
 	private static  String msg;
 	private static  String user;
+        
+        private static String j;
+        private static String u;
+
+    public  String getJ() {
+        return j;
+    }
+
+    public  void setJ(String j) {
+        Login.j = j;
+    }
+
+    public  String getU() {
+        return u;
+    }
+
+    public  void setU(String u) {
+        Login.u = u;
+    }
 
     public String getPwd() {
         return pwd;
@@ -62,6 +81,7 @@ public class Login implements Serializable{
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("username", user);
                         session.setAttribute("tipo", valid);
+                        session.setAttribute("clave", LoginDAO.claveUsuario(user));
 			return "index";
 		} else {
 			FacesContext.getCurrentInstance().addMessage(
@@ -79,6 +99,31 @@ public class Login implements Serializable{
 		session.invalidate();
 		return "index";
 	}
+        
+        public String actualizaRecord(){
+            System.out.println("entre update");
+            boolean update = LoginDAO.actualizaRecord(Integer.parseInt(j), Integer.parseInt(u));
+            System.out.println("regrese update");
+            if(update){
+                System.out.println("regrese true");
+                if(Integer.parseInt(j)==1)
+                    return "Saludador.html";
+                if(Integer.parseInt(j)==2)
+                    return "FizzFazz.html";
+                if(Integer.parseInt(j)==3)
+                    return "PiePapTij.html";
+            }else{
+                System.out.println("regrese false");
+                if(Integer.parseInt(j)==1)
+                    return "Saludador.html";
+                if(Integer.parseInt(j)==2)
+                    return "FizzFazz.html";
+                if(Integer.parseInt(j)==3)
+                    return "PiePapTij.html";
+            }
+            return "Saludador.html";
+            
+        }
 
     public Login() {
     }
