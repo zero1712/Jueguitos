@@ -20,7 +20,7 @@
                     <h:commandLink action="#{noticiasController.previous}" value="#{bundle.Previous} #{noticiasController.pagination.pageSize}" rendered="#{noticiasController.pagination.hasPreviousPage}"/>&nbsp;
                     <h:commandLink action="#{noticiasController.next}" value="#{bundle.Next} #{noticiasController.pagination.pageSize}" rendered="#{noticiasController.pagination.hasNextPage}"/>&nbsp;
                     <h:dataTable value="#{noticiasController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
-                        <h:column>
+                       <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListNoticiasTitle_clave}"/>
                             </f:facet>
