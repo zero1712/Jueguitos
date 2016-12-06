@@ -45,7 +45,7 @@
                                                     </div>
                                                     <div style="float: right; width: 420px;" >
                                                         <h:form>
-                                                            <h3>JSF Login Logout</h3>
+                                                            <h3>Login</h3>
                                                             <h:outputText value="Username" />
                                                             <h:inputText id="username" value="#{login.user}"></h:inputText>
                                                             <h:message for="username"></h:message>
@@ -75,7 +75,7 @@
 			<!-- Main -->
 				<div id="main">
 					<div class="inner">
-					
+		<h:panelGroup rendered="#{not empty username}">			
 		<ul class="m">
        
                     <li class="m"><h:link outcome="/juegos/List" value="Juegos"/></li>
@@ -90,6 +90,7 @@
                     <li class="m"><h:form><h:commandLink action="#{login.logout}" value="Logout"></h:commandLink></h:form></li>
         										
 		</ul>
+                </h:panelGroup>
 						
 					
 					<!-- Boxes -->
