@@ -60,7 +60,11 @@ public class PiePapTij extends HttpServlet {
 		val = Integer.parseInt(valor);
                 
                 System.out.println("soy val"+ val);
-		 PrintWriter out = response.getWriter();
+
+                 String nombre = request.getParameter("nombre");
+		response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+           out.println("<link rel=\"stylesheet\" href=\"../Jueguitos/faces/assets/css/main.css\" />");
 		 tiro = (int)(Math.random()*(3-1+1)+1);
                  System.out.println("Soy tiro"+ tiro);
 		 if(val == tiro){
@@ -110,12 +114,8 @@ public class PiePapTij extends HttpServlet {
 		 }
 		 
 			response.setContentType("text/html");
-			out.println("<form action=\"Record\">");
-	        if(desicion.equals("Gana el usuario")||desicion.equals("Empate")){
-	        	 out.println("<input type=\"hidden\" name=\"regresa\" value=\"gano\">");
-	        }else{
-	        	 out.println("<input type=\"hidden\" name=\"regresa\" value=\"perdio\">");
-	        }
+			out.println("<form action=\"/Jueguitos/faces/juegos/View.xhtml\">");
+	       
 	       
 
 	        out.println("<input type=\"submit\" value=\"Regresar\">");
