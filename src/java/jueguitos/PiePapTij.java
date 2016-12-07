@@ -117,9 +117,9 @@ public class PiePapTij extends HttpServlet {
 	        	 out.println("<input type=\"hidden\" name=\"regresa\" value=\"perdio\">");
 	        }
 	       
-	        out.println("<input type=\"hidden\" name=\"usuario\" value=\""+request.getParameter("userid")+"\">");
-	        out.println("<input type=\"hidden\" name=\"record\" value=\"\">");
-	        out.println("<input type=\"submit\" value=\"envia\">");
+
+	        out.println("<input type=\"submit\" value=\"Regresar\">");
+	      
 	        out.println("</form>");
 		 
 		 
