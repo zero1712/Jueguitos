@@ -74,8 +74,8 @@
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="/inscripciones/Create.xhtml" value="inscribirme" class="button fit" rendered="#{tipo != 1}"/>
-                <h:commandLink action="#{torneosController.prepareCreate}" value="#{bundle.ListTorneosCreateLink}" class="button fit"/>
+                <h:commandLink action="/inscripciones/Create.xhtml" value="inscribirme" class="button fit" rendered="#{tipo != 1 and torneosController.items.rowCount != 0 }"/>
+                <h:commandLink action="#{torneosController.prepareCreate}" value="#{bundle.ListTorneosCreateLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.ListTorneosIndexLink}" class="button fit"/>
