@@ -15,7 +15,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.JOptionPane;
-
+/**
+ *
+ * @author Cyntia Yomally Osorno López
+ * @author Cesar Gibran Cadena Espinoza
+ * @author Hever Luis Alvarez Carmona
+ * @author Albaro Tonatihu Fabian Silverio
+ * @author Jhonatan Saúl Ramírez Bravo
+ * @version 06/12/2016
+ * 
+ */
 /**
  * Servlet implementation class piepaptij
  */
