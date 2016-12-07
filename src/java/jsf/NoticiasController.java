@@ -17,7 +17,16 @@ import javax.faces.convert.FacesConverter;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
-
+/**
+ *
+ * @author Cyntia Yomally Osorno López
+ * @author Cesar Gibran Cadena Espinoza
+ * @author Hever Luis Alvarez Carmona
+ * @author Albaro Tonatihu Fabian Silverio
+ * @author Jhonatan Saúl Ramírez Bravo
+ * @version 06/12/2016
+ * 
+ */
 @Named("noticiasController")
 @SessionScoped
 public class NoticiasController implements Serializable {

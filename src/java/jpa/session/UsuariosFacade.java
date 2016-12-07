@@ -12,7 +12,13 @@ import jpa.entities.Usuarios;
 
 /**
  *
- * @author CYNTIA OSORNO
+ * @author Cyntia Yomally Osorno López
+ * @author Cesar Gibran Cadena Espinoza
+ * @author Hever Luis Alvarez Carmona
+ * @author Albaro Tonatihu Fabian Silverio
+ * @author Jhonatan Saúl Ramírez Bravo
+ * @version 06/12/2016
+ * 
  */
 @Stateless
 public class UsuariosFacade extends AbstractFacade<Usuarios> {

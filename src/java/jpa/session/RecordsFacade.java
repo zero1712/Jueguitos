@@ -12,7 +12,13 @@ import jpa.entities.Records;
 
 /**
  *
- * @author CYNTIA OSORNO
+ * @author Cyntia Yomally Osorno López
+ * @author Cesar Gibran Cadena Espinoza
+ * @author Hever Luis Alvarez Carmona
+ * @author Albaro Tonatihu Fabian Silverio
+ * @author Jhonatan Saúl Ramírez Bravo
+ * @version 06/12/2016
+ * 
  */
 @Stateless
 public class RecordsFacade extends AbstractFacade<Records> {

@@ -18,6 +18,17 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
+/**
+ *
+ * @author Cyntia Yomally Osorno López
+ * @author Cesar Gibran Cadena Espinoza
+ * @author Hever Luis Alvarez Carmona
+ * @author Albaro Tonatihu Fabian Silverio
+ * @author Jhonatan Saúl Ramírez Bravo
+ * @version 06/12/2016
+ * 
+ */
+
 @Named("inscripcionesController")
 @SessionScoped
 public class InscripcionesController implements Serializable {
