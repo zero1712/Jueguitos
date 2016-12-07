@@ -121,6 +121,7 @@ public static boolean actualizaRecord(int j, int usuario){
                     
                                 int n = ps.executeUpdate();
                                 if(n>0)
+                                
                                     return true;    
                                 
                         }
