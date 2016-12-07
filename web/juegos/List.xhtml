@@ -48,6 +48,7 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
+                            
                             <h:commandLink action="#{juegosController.prepareView}" value="#{bundle.ListJuegosViewLink}" class="button fit"/>
                             <h:outputText value=" "/>
                             <h:commandLink action="#{juegosController.prepareEdit}" value="#{bundle.ListJuegosEditLink}" class="button fit" rendered="#{tipo == 1}"/>
