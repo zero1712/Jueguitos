@@ -26,14 +26,14 @@
                     <h:outputText value="#{recordsController.selected.cveUsuario}" title="#{bundle.ViewRecordsTitle_cveUsuario}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{recordsController.destroyAndView}" value="#{bundle.ViewRecordsDestroyLink}" class="button fit" rendered="#{tipo == 1}/>
+                <h:commandLink action="#{recordsController.destroyAndView}" value="#{bundle.ViewRecordsDestroyLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewRecordsEditLink}" class="button fit"/>
+                <h:link outcome="Edit" value="#{bundle.ViewRecordsEditLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
-                <h:commandLink action="#{recordsController.prepareCreate}" value="#{bundle.ViewRecordsCreateLink}" class="button fit" rendered="#{tipo == 1}/>
+                <h:commandLink action="#{recordsController.prepareCreate}" value="#{bundle.ViewRecordsCreateLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
-                <h:commandLink action="#{recordsController.prepareList}" value="#{bundle.ViewRecordsShowAllLink}" class="button fit" />rendered="#{tipo == 1}/>
+                <h:commandLink action="#{recordsController.prepareList}" value="#{bundle.ViewRecordsShowAllLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
                 <br />
                 <h:link outcome="/index" value="#{bundle.ViewRecordsIndexLink}" class="button fit"/>
