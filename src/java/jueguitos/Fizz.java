@@ -44,7 +44,10 @@ public class Fizz extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		int i=1;
-		PrintWriter out=response.getWriter();
+		String nombre = request.getParameter("nombre");
+		response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+                out.println("<link rel=\"stylesheet\" href=\"../Jueguitos/faces/assets/css/main.css\" />");
 		out.println("Fizz Bazz Buzz");
 		out.println();
 		out.println(i);
@@ -52,15 +55,22 @@ public class Fizz extends HttpServlet {
 		while (i<=50){			
 			if (i%3==0 && i%5==0){
 				out.println(i+" Buzz");
+                                out.println("<br>");
 			}else if(i%3==0){
 				out.println(i+" Fizz");
+                                 out.println("<br>");
 			}else if(i%5==0){
 				out.println(i+" Bazz");
+                                 out.println("<br>");
 			}else{
 				out.println(i);
+                                 out.println("<br>");
 			}
 			i++;
 		}
+                out.println("<form action=\"/Jueguitos/faces/juegos/View.xhtml\">");
+	        out.println("<input type=\"submit\" value=\"Regresar\">");
+	        out.println("</form>");
 	}
 
 	/**
