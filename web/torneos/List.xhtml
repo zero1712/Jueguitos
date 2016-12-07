@@ -65,15 +65,16 @@
                             <f:facet name="header">
                                 <h:outputText value="&nbsp;"/>
                             </f:facet>
-                            <h:commandLink action="#{torneosController.prepareView}" value="#{bundle.ListTorneosViewLink}" class="button fit"/>
+                            <h:commandLink action="#{torneosController.prepareView}" value="#{bundle.ListTorneosViewLink}" class="button fit" rendered="#{tipo == 1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{torneosController.prepareEdit}" value="#{bundle.ListTorneosEditLink}" class="button fit"/>
+                            <h:commandLink action="#{torneosController.prepareEdit}" value="#{bundle.ListTorneosEditLink}" class="button fit" rendered="#{tipo == 1}"/>
                             <h:outputText value=" "/>
-                            <h:commandLink action="#{torneosController.destroy}" value="#{bundle.ListTorneosDestroyLink}" class="button fit"/>
+                            <h:commandLink action="#{torneosController.destroy}" value="#{bundle.ListTorneosDestroyLink}" class="button fit" rendered="#{tipo == 1}"/>
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
+                <h:commandLink action="/inscripciones/Create.xhtml" value="inscribirme" class="button fit" rendered="#{tipo != 1}"/>
                 <h:commandLink action="#{torneosController.prepareCreate}" value="#{bundle.ListTorneosCreateLink}" class="button fit"/>
                 <br />
                 <br />
