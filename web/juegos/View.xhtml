@@ -29,13 +29,17 @@
                 <br />
                 <h:commandLink action="#{juegosController.destroyAndView}" value="#{bundle.ViewJuegosDestroyLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
-                <br />
+               
                 <h:link outcome="Edit" value="#{bundle.ViewJuegosEditLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
                 <h:commandLink action="#{juegosController.prepareCreate}" value="#{bundle.ViewJuegosCreateLink}" class="button fit" rendered="#{tipo == 1}"/>
                 <br />
+                INGRESA LOS SIGUIENTES DATOS PARA PODER JUGAR (ESTOS DATOS PUEDES VERLOS EN LA PARTE DE ARRIBA): <br/> 
                 <h:outputText value="Clave juego: "/><h:inputText id="password" value="#{login.j}"></h:inputText>
                 <h:outputText value="Clave usuario: "/><h:inputText id="we" value="#{login.u}"></h:inputText>
+                <br/>
+                <br/>
+                
                 <h:commandLink action="#{login.actualizaRecord}" value="#{bundle.Jugar}" class="button fit" rendered="#{juegosController.selected.clave==1}"/>
                 <br />
                 <h:commandLink action="#{login.actualizaRecord}" value="#{bundle.Jugar}" class="button fit" rendered="#{juegosController.selected.clave==2}"/>
