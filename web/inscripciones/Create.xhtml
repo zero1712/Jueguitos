@@ -15,8 +15,6 @@
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
-                    <h:outputLabel value="#{bundle.CreateInscripcionesLabel_clave}" for="clave" />
-                    <h:inputText id="clave" value="#{inscripcionesController.selected.clave}" title="#{bundle.CreateInscripcionesTitle_clave}" required="true" requiredMessage="#{bundle.CreateInscripcionesRequiredMessage_clave}"/>
                     <h:outputLabel value="#{bundle.CreateInscripcionesLabel_fecha}" for="fecha" />
                     <h:inputText id="fecha" value="#{inscripcionesController.selected.fecha}" title="#{bundle.CreateInscripcionesTitle_fecha}" >
                         <f:convertDateTime pattern="MM/dd/yyyy" />
