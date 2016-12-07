@@ -76,6 +76,9 @@ public class Saludador extends HttpServlet {
             if(getInitParameter(name).equals(nombre.toUpperCase())){
             	ban = false;
             	out.println("No te saludare malosis");
+                out.println("<form action=\"/Jueguitos/faces/juegos/View.xhtml\">");
+	        out.println("<input type=\"submit\" value=\"Regresar\">");
+	        out.println("</form>");
             	break;
             	
             }
